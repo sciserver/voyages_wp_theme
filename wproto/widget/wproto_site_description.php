@@ -13,7 +13,8 @@
 		
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'wproto-site-description-widget' );
 		
-			$this->WP_Widget( 'wproto-site-description-widget', __( '&laquo;Galaxy&raquo; Site Description', 'wproto' ), $widget_ops, $control_ops );
+			//$this->WP_Widget( 'wproto-site-description-widget', __( '&laquo;Galaxy&raquo; Site Description', 'wproto' ), $widget_ops, $control_ops );
+			parent::__construct( 'wproto-site-description-widget', __( '&laquo;Galaxy&raquo; Site Description', 'wproto' ), $widget_ops, $control_ops );
 		}
 		
 		function widget( $args, $instance ) {

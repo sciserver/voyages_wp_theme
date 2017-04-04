@@ -13,7 +13,8 @@
 		
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'wproto-google-map-widget' );
 		
-			$this->WP_Widget( 'wproto-google-map-widget', __( '&laquo;Galaxy&raquo; Google Map', 'wproto' ), $widget_ops, $control_ops );
+			//$this->WP_Widget( 'wproto-google-map-widget', __( '&laquo;Galaxy&raquo; Google Map', 'wproto' ), $widget_ops, $control_ops );
+			parent::__construct( 'wproto-google-map-widget', __( '&laquo;Galaxy&raquo; Google Map', 'wproto' ), $widget_ops, $control_ops );
 		}
 		
 		function widget( $args, $instance ) {

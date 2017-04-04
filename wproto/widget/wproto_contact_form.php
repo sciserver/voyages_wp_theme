@@ -13,7 +13,8 @@
 		
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'wproto-contact-form-widget' );
 		
-			$this->WP_Widget( 'wproto-contact-form-widget', __( '&laquo;Galaxy&raquo; Contact Form', 'wproto' ), $widget_ops, $control_ops );
+			//$this->WP_Widget( 'wproto-contact-form-widget', __( '&laquo;Galaxy&raquo; Contact Form', 'wproto' ), $widget_ops, $control_ops );
+			parent::__construct( 'wproto-contact-form-widget', __( '&laquo;Galaxy&raquo; Contact Form', 'wproto' ), $widget_ops, $control_ops );
 		}
 		
 		function widget( $args, $instance ) {

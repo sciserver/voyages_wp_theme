@@ -13,7 +13,8 @@
 		
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'wproto-categories-widget' );
 		
-			$this->WP_Widget( 'wproto-categories-widget', __( '&laquo;Galaxy&raquo; Categories', 'wproto' ), $widget_ops, $control_ops );
+			//$this->WP_Widget( 'wproto-categories-widget', __( '&laquo;Galaxy&raquo; Categories', 'wproto' ), $widget_ops, $control_ops );
+			parent::__construct( 'wproto-categories-widget', __( '&laquo;Galaxy&raquo; Categories', 'wproto' ), $widget_ops, $control_ops );
 		}
 		
 		function widget( $args, $instance ) {

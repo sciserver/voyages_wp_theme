@@ -13,7 +13,8 @@
 		
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'wproto-popular-posts-widget' );
 		
-			$this->WP_Widget( 'wproto-popular-posts-widget', __( '&laquo;Galaxy&raquo; Popular Posts', 'wproto' ), $widget_ops, $control_ops );
+			//$this->WP_Widget( 'wproto-popular-posts-widget', __( '&laquo;Galaxy&raquo; Popular Posts', 'wproto' ), $widget_ops, $control_ops );
+			parent::__construct( 'wproto-popular-posts-widget', __( '&laquo;Galaxy&raquo; Popular Posts', 'wproto' ), $widget_ops, $control_ops );
 		}
 		
 		function widget( $args, $instance ) {

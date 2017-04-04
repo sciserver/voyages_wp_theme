@@ -13,7 +13,8 @@
 		
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'wproto-portfolio-widget' );
 		
-			$this->WP_Widget( 'wproto-portfolio-widget', __( '&laquo;Galaxy&raquo; Portfolio', 'wproto' ), $widget_ops, $control_ops );
+			//$this->WP_Widget( 'wproto-portfolio-widget', __( '&laquo;Galaxy&raquo; Portfolio', 'wproto' ), $widget_ops, $control_ops );
+			parent::__construct( 'wproto-portfolio-widget', __( '&laquo;Galaxy&raquo; Portfolio', 'wproto' ), $widget_ops, $control_ops );
 		}
 		
 		function widget( $args, $instance ) {

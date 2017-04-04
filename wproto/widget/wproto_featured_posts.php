@@ -13,7 +13,8 @@
 		
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'wproto-featured-posts-widget' );
 		
-			$this->WP_Widget( 'wproto-featured-posts-widget', __( '&laquo;Galaxy&raquo; Featured Posts', 'wproto' ), $widget_ops, $control_ops );
+			//$this->WP_Widget( 'wproto-featured-posts-widget', __( '&laquo;Galaxy&raquo; Featured Posts', 'wproto' ), $widget_ops, $control_ops );
+			parent::__construct( 'wproto-featured-posts-widget', __( '&laquo;Galaxy&raquo; Featured Posts', 'wproto' ), $widget_ops, $control_ops );
 		}
 		
 		function widget( $args, $instance ) {

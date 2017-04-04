@@ -13,7 +13,8 @@
 		
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'wproto-logos-carousel-widget' );
 		
-			$this->WP_Widget( 'wproto-logos-carousel-widget', __( '&laquo;Galaxy&raquo; Logos Carousel', 'wproto' ), $widget_ops, $control_ops );
+			//$this->WP_Widget( 'wproto-logos-carousel-widget', __( '&laquo;Galaxy&raquo; Logos Carousel', 'wproto' ), $widget_ops, $control_ops );
+			parent::__construct( 'wproto-logos-carousel-widget', __( '&laquo;Galaxy&raquo; Logos Carousel', 'wproto' ), $widget_ops, $control_ops );
 		}
 		
 		function widget( $args, $instance ) {

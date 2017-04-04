@@ -13,7 +13,8 @@
 		
 			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'wproto-menus-widget' );
 		
-			$this->WP_Widget( 'wproto-menus-widget', __( '&laquo;Galaxy&raquo; Menus', 'wproto' ), $widget_ops, $control_ops );
+			//$this->WP_Widget( 'wproto-menus-widget', __( '&laquo;Galaxy&raquo; Menus', 'wproto' ), $widget_ops, $control_ops );
+			parent::__construct( 'wproto-menus-widget', __( '&laquo;Galaxy&raquo; Menus', 'wproto' ), $widget_ops, $control_ops );
 		}
 		
 		function widget( $args, $instance ) {
