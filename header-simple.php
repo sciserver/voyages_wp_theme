@@ -19,3 +19,6 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php if ( defined( 'WP_ENV' ) && ( 'development' == WP_ENV ) && !( is_user_logged_in() ) ) : ?>
+<div class="preheader"><a href="<?php echo site_url(); ?>/wp-login.php" class="button iconic size-medium color-blue">LogIn</a></div>
+<?php endif; ?>

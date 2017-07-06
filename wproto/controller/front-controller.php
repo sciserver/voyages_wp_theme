@@ -620,6 +620,8 @@ class wpl_galaxy_wp_front_controller extends wpl_galaxy_wp_base_controller {
 		wp_enqueue_style( 'wproto-owl-carousel', WPROTO_THEME_URL . '/css/libs/owl.carousel.css?' . $this->settings['res_cache_time'] );
 		wp_enqueue_style( 'wproto-animate-css', WPROTO_THEME_URL . '/css/libs/animate.min.css?' . $this->settings['res_cache_time'] );
 		
+		wp_enqueue_style( 'voyages', WPROTO_THEME_URL . '/css/voyages.css' );
+		
 		$icomoon_enabled = $wpl_galaxy_wp->get_option('icomoon_enabled');
 		if( $icomoon_enabled == 'yes' ) {
 			wp_enqueue_style( 'wproto-icomoon', WPROTO_THEME_URL . '/css/libs/icomoon/style.css?' . $this->settings['res_cache_time'] );
