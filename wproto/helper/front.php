@@ -550,7 +550,9 @@ class wpl_galaxy_wp_front {
 			$custom_logo_url = $wpl_galaxy_wp->get_option( 'custom_logo_url', 'general' );
 			$custom_logo_url_2x = $wpl_galaxy_wp->get_option( 'custom_logo_url_2x', 'general' );
 			$custom_logo_image = wpl_galaxy_wp_utils::is_retina() ? $custom_logo_url_2x : $custom_logo_url;
-			$size = getimagesize(  ABSPATH . '/' . parse_url($custom_logo_url, PHP_URL_PATH) );
+			//$size = getimagesize(  ABSPATH . '/' . parse_url($custom_logo_url, PHP_URL_PATH) );
+			$rel_path = stristr( parse_url($custom_logo_url, PHP_URL_PATH ) , 'wp-content/' );
+			$size = getimagesize(  ABSPATH . '/' . $rel_path );
 		?>
 			<a id="logo" <?php if( !is_front_page() ): ?> href="<?php echo site_url(); ?>"<?php endif; ?>><img width="<?php echo isset( $size[0] ) ? $size[0] : ''; ?>" src="<?php echo @$custom_logo_image; ?>" alt="" /></a>
 		<?php
