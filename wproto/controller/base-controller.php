@@ -1176,6 +1176,18 @@ class wpl_galaxy_wp_base_controller {
 				));
 				
 			}
+
+			// bsouter@jhu.edu SkyServer sidebar
+			$side_skyserver = term_exists( 'skyserver', 'wproto_sidebars' );
+			
+			if( $side_skyserver === 0 || $side_skyserver === NULL ) {
+			
+				wp_insert_term( __( 'Skyserver Sidebar', 'wproto' ), 'wproto_sidebars', array(
+					'description' => '',
+					'slug' => 'skyserver'
+				));
+				
+			}
 			
 		}
 		

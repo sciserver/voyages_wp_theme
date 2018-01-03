@@ -245,15 +245,15 @@
 		 * Toggles shortcode
 		 **/
 		function toggles( $atts, $content ) {
-			
+
 			$toggles = array_filter( explode( '[/toggle]', $content ) );
 			
 			$inside = '';
 			
 			if( is_array( $toggles ) && count( $toggles ) > 0 ) {
 				foreach( $toggles as $toggle ) {
-
-					preg_match( '/\[toggle title=("|\')(.*)("|\')\](.*)$/s', $toggle, $matches );
+					
+					preg_match( '/\[toggle title=(&.+?;)(.*)(&.+?;)\](.*)$/s', $toggle, $matches ) ;
 
 					$title = isset( $matches[2] ) ? $matches[2] : '';
 					$c = isset( $matches[4] ) ? $matches[4] : '';
@@ -261,9 +261,9 @@
 					if( $title <> '' && $c <> '' )
 						$inside .= '<div class="toggle"><h4><i class="icon-plus"></i>' . $title . '</h4><div class="toggle-content">' . apply_filters( 'the_content', $c ) . '</div></div>';
 				}
-			}
+			} 
 			
-			return '<div class="toggles">' . $inside . '</div>';
+			return '<div class="toggles">' . $inside . '</div>' . "<br>\n";
 			
 		}
 		

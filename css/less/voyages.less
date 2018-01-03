@@ -3,10 +3,96 @@
 	Extra styles and style overrides for Voyages
 	===============================================================================================================================================
 **/
+/**
+	===============================================================================================================================================
+	VARS
+	===============================================================================================================================================
+**/
+@skys-blue: #287CE7;
+@skys-orange: spin( @skys-blue , 180);
+@skys-blue-pale: lighten( @skys-blue , 30% );
+@skys-purple-pale: spin( @skys-blue-pale , 60 );
+@skys-green-pale: spin( @skys-blue-pale , -60 );
+@skys-red-pale: spin( @skys-blue-pale , 90);
+
+/**
+	===============================================================================================================================================
+	STYLES
+	===============================================================================================================================================
+**/
 .preheader{
-	background-color:yellow;
+	background-color:red;
 	color:black;
 	text-align: right;
 	padding:5px;
 	margin:0;
+}
+.skyserver-wrapper {
+	@import (less) 'libs/bootstrap/dist/css/bootstrap.css';
+}
+
+.skyserver-wrapper {
+	
+	.skys-nav {
+		.btn-skys {
+			.skyserver-wrapper .btn;
+			.skyserver-wrapper .btn-primary;
+			margin: 15px 0;
+		}
+		.btn-next {
+			.skyserver-wrapper .pull-right;
+		}
+		.btn-prev {
+			.skyserver-wrapper .pull-left;
+		}
+	}
+	.skys-content {
+		.skyserver-wrapper .text-left;		
+	}
+	.skys-figure {
+		.skyserver-wrapper .text-center;
+		&.skys-figure-right {
+			.skyserver-wrapper .pull-right;
+			margin-left: 10px;
+		}
+		&.skys-figure-left {
+			.skyserver-wrapper .pull-left;
+			margin-right: 10px;
+		}
+		.skys-caption {
+			font-style: italic;
+			font-size: 0.9em;
+			padding-bottom:20px;
+		}
+		margin-bottom: 10px;
+	}
+	.skys-box{
+		color:#333333;
+		border-radius: 5px;
+		margin: 15px 0;
+		padding: 15px;
+		a, a:visited, a:focus {
+			color: #133e64;
+			font-weight: bold;
+		}
+	}
+	.skys-challenge{
+		background-color: @skys-red-pale;
+	}
+	.skys-explore{
+		background-color: @skys-green-pale;
+	}
+	.skys-exercise{
+		background-color: @skys-blue-pale;
+	}
+	.skys-question{
+		color:#333333;
+		background-color: @skys-purple-pale;
+	}
+	
+	.vocabulary {
+		font-style: italic;
+		font-weight: bold;
+		color: @skys-orange;
+	}
 }

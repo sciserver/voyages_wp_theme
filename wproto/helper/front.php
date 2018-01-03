@@ -468,11 +468,13 @@ class wpl_galaxy_wp_front {
 	public static function get_sidebar() {
 		global $wpl_galaxy_wp, $post;
 		
+		// Defaults
 		$sidebar_name = 'sidebar-right';
 		$sidebar_enabled = 'yes';
 		$sidebar_type = 'right';
 		
-		if( is_single() || is_page() ) {			
+		if( is_single() || is_page() ) {	
+		
 			$page_settings = $wpl_galaxy_wp->model->post->get_post_custom( $post->ID );
 			
 			$sidebar_enabled = isset( $page_settings->wproto_page_sidebar ) && $page_settings->wproto_page_sidebar != 'none' ? 'yes' : 'no';
