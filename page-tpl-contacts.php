@@ -16,7 +16,8 @@
 	<!--
 		GOOGLE MAP
 	-->
-	<section id="google-map-contact" data-zoom="<?php echo $zoom; ?>" data-draggable="<?php echo $map_draggable; ?>" data-zoom-controls="<?php echo $map_zoom_controls; ?>"></section>
+	<!-- bsouter this doesn't seem to do anything except to ruin the layout. probably deprecated api. -->
+	<!--section id="google-map-contact" data-zoom="<?php //echo $zoom; ?>" data-draggable="<?php //echo $map_draggable; ?>" data-zoom-controls="<?php //echo $map_zoom_controls; ?>"></section -->
 
 	<!-- 
 	
