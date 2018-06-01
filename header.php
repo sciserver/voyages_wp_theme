@@ -38,32 +38,14 @@
 			</fieldset>
 		</form>
 		
-		<?php if( wpl_galaxy_wp_utils::isset_woocommerce() ): ?>
-		<div class="pull-right">
-			<a href="<?php echo get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ); ?>" class="my-account"><i class="fa fa-user"></i> <?php _e('My account', 'wproto'); ?></a>
-			<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="my-cart"><i class="fa fa-shopping-cart"></i> <?php _e('Cart:', 'wproto'); ?> <?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'wproto' ), $woocommerce->cart->cart_contents_count);?> / <?php echo $woocommerce->cart->get_cart_total(); ?></a>
-			
-			<div id="wproto-ajax-header-cart">
-				<div class="triangle"></div>
-				<div class="inner">
-					<img class="ajax-loader" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ajax-loader.gif" width="16" alt="" />
-					<div class="cart-content">
-				
-					</div>
-				</div>
-			</div>
-			
+		<div class="pull-left">
+			<span class="social-icons"><a href="/index.php" ><img src="/wp-content/themes/wpl-galaxy/images/icons/flag-usa-30x20.png" alt="Voyages [English]" title="Voyages [English]"></a> <a href="/es/index.php" ><img src="/wp-content/themes/wpl-galaxy/images/icons/flag-spain-30x20.png" alt="Voyages [Spanish]" title="Voyages [Spanish]"></a></span>
 		</div>
-		<?php endif; ?>
-		
+		<div class="pull-right">
 		<span class="social-icons">
 			<?php wpl_galaxy_wp_front::social_icons(); ?>
 		</span>      
-		
-		<?php $phone = $wpl_galaxy_wp->get_option( 'phone_number', 'general' ); ?>
-		<?php if( $phone <> '' ): ?>
-		<span class="call-to-us"><?php _e('Call us:', 'wproto'); ?> <a href="tel:<?php echo str_replace( ' ', '', $phone ); ?>"><?php echo $phone; ?></a></span>
-		<?php endif; ?>
+		</div>
 		
 	</header>
 	
