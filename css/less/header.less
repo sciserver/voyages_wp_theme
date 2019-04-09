@@ -1238,7 +1238,7 @@ li:hover .arrow-drop {
 }
 
 
-/* Screen 960px */
+/* Screen 1199px */
 @media only screen and (max-width:1199px) { 
 	header.big .grid .one-quarter, #header-menu.three-quarters {
 		width: 100% !important;
@@ -1256,6 +1256,21 @@ li:hover .arrow-drop {
 	header.big {
 		height: auto !important;
 	}
+	// so that the additional SkyServer doesn't cause the menu to wrap.
+	#header-menu {
+		#header-menu-ul > li {
+			span.menu-text {
+				//.font-size( 1.2 );
+			}
+			span.menu-item-content {
+				padding-left: 5px;
+			}
+		}
+		#header-menu-ul > li > a.item {
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+	}	
 }
 
 /** Tablet, smaller 960px **/
