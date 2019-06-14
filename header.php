@@ -65,7 +65,7 @@
 		<div class="wrapper">
 		
 			<div class="header-info-block">
-				<p><strong><?php _e('Phone:','wproto'); ?></strong> <?php echo $phone; ?></p>
+				<p><strong><?php _e('Phone:','wproto'); ?></strong> <?php if ( !empty( $phone ) ) echo $phone; ?></p>
 				<p><strong><?php _e('Email:','wproto'); ?></strong> <a href="mailto:<?php bloginfo('admin_email'); ?>"><?php bloginfo('admin_email'); ?></a></p>
 			</div>
 		
